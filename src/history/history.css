@@ -1,0 +1,101 @@
+.history-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #030610;
+}
+
+.history-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #030610;
+}
+
+.history-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(214, 226, 244, 0.6);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.history-bar {
+  position: fixed;
+  z-index: 16;
+  left: calc(var(--rail-left) + var(--rail-width) + 12px);
+  top: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 7px;
+  max-width: calc(100vw - var(--rail-left) - var(--rail-width) - 26px);
+  border-radius: 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.history-chip {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 8px 13px;
+  border-radius: 11px;
+  background: transparent;
+  color: rgba(214, 226, 244, 0.72);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  transition: background 0.18s, color 0.18s;
+}
+
+.history-chip:hover {
+  background: var(--glass-hover);
+  color: #f2f7ff;
+}
+
+.history-chip.on {
+  background: var(--accent-soft);
+  color: #f2f7ff;
+}
+
+.history-chip:focus-visible {
+  outline: 2px solid #8fd0ff;
+  outline-offset: 1px;
+}
+
+.history-brand {
+  position: fixed;
+  z-index: 16;
+  left: var(--rail-left);
+  top: 14px;
+  width: var(--rail-width);
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  color: #f2f7ff;
+  user-select: none;
+}
